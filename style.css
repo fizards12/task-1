@@ -1,0 +1,93 @@
+:root {
+  --primary: #0d6efd;
+  --primary-content: #fff;
+  --secondary: #6c757d;
+  --success: #198754;
+  --info: #0dcaf0;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #212529;
+}
+
+
+body {
+  background-color: var(--dark);
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: color-mix(in srgb,var(--dark), white 30%);
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+}
+
+form {
+  margin: auto;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem;
+  width: 100%;
+  max-width: 768px;
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    label {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: color-mix(in srgb,var(--dark), white 30%);
+    }
+  }
+}
+
+input{
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  font-size: 1.1rem;
+}
+
+input:hover{
+  border: 2px solid color-mix(in srgb,var(--primary), white 50%);
+}
+input:focus{
+  border: 2px solid var(--primary);
+}
+
+button{
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  background-color: var(--primary);
+  color: var(--primary-content);
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: color-mix(in srgb,var(--primary), white 10%);
+}
+
+button:active{
+  background-color: var(--primary);
+}
+
+.message {
+  padding: 1rem;
+  color: color-mix(in srgb,var(--dark), white 30%);
+}
+.message-success {
+  color: color-mix(in srgb, var(--success), white 10%);
+}
+.message-error {
+  color: color-mix(in srgb, var(--danger), white 10%);
+}
